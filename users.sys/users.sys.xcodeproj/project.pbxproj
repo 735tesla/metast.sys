@@ -11,14 +11,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5E4A4C971C8247DB0072EF71 /* CopyFiles */ = {
+		5E4A4C971C8247DB0072EF71 /* Copy Files (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -71,7 +72,7 @@
 			buildPhases = (
 				5E4A4C951C8247DB0072EF71 /* Sources */,
 				5E4A4C961C8247DB0072EF71 /* Frameworks */,
-				5E4A4C971C8247DB0072EF71 /* CopyFiles */,
+				5E4A4C971C8247DB0072EF71 /* Copy Files (1 item) */,
 			);
 			buildRules = (
 			);
@@ -237,6 +238,7 @@
 				5E4A4CA21C8247DB0072EF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

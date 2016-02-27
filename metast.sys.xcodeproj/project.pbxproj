@@ -82,6 +82,7 @@
 				5E4A4C271C822FF00072EF71 /* Sources */,
 				5E4A4C281C822FF00072EF71 /* Frameworks */,
 				5E4A4C291C822FF00072EF71 /* CopyFiles */,
+				5E4A4CA81C825B5E0072EF71 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -122,6 +123,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E4A4CA81C825B5E0072EF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E4A4C271C822FF00072EF71 /* Sources */ = {

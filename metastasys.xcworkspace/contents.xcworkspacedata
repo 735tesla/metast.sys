@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:hostinfo.sys/hostinfo.sys.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:users.sys/users.sys.xcodeproj">
    </FileRef>
    <FileRef
