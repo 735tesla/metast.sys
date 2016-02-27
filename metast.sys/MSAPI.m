@@ -8,7 +8,7 @@
 
 #import "MSAPI.h"
 
-NSString const *MSBaseURL = @"http://nottesla.com/";
+NSString const *MSBaseURL = @"https://nottesla.com/";
 
 @implementation MSAPI
 
