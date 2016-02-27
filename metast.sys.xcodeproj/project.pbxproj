@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E4A4C2F1C822FF00072EF71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A4C2E1C822FF00072EF71 /* main.m */; };
-		5E4A4C3A1C8233560072EF71 /* MSAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A4C391C8233560072EF71 /* MSAPI.m */; };
 		5E4A4C3D1C82381B0072EF71 /* MSCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A4C3C1C82381B0072EF71 /* MSCommand.m */; };
+		5E4A4CA51C825A250072EF71 /* MSAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A4CA31C825A250072EF71 /* MSAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +27,10 @@
 /* Begin PBXFileReference section */
 		5E4A4C2B1C822FF00072EF71 /* metast.sys */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = metast.sys; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4A4C2E1C822FF00072EF71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5E4A4C381C8233560072EF71 /* MSAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSAPI.h; path = ../MSAPI.h; sourceTree = "<group>"; };
-		5E4A4C391C8233560072EF71 /* MSAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSAPI.m; path = ../MSAPI.m; sourceTree = "<group>"; };
 		5E4A4C3B1C82381B0072EF71 /* MSCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommand.h; sourceTree = "<group>"; };
 		5E4A4C3C1C82381B0072EF71 /* MSCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCommand.m; sourceTree = "<group>"; };
+		5E4A4CA31C825A250072EF71 /* MSAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAPI.m; sourceTree = "<group>"; };
+		5E4A4CA41C825A250072EF71 /* MSAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAPI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 		5E4A4C2D1C822FF00072EF71 /* metast.sys */ = {
 			isa = PBXGroup;
 			children = (
-				5E4A4C381C8233560072EF71 /* MSAPI.h */,
-				5E4A4C391C8233560072EF71 /* MSAPI.m */,
+				5E4A4CA31C825A250072EF71 /* MSAPI.m */,
+				5E4A4CA41C825A250072EF71 /* MSAPI.h */,
 				5E4A4C3B1C82381B0072EF71 /* MSCommand.h */,
 				5E4A4C3C1C82381B0072EF71 /* MSCommand.m */,
 				5E4A4C2E1C822FF00072EF71 /* main.m */,
@@ -128,7 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E4A4C3A1C8233560072EF71 /* MSAPI.m in Sources */,
+				5E4A4CA51C825A250072EF71 /* MSAPI.m in Sources */,
 				5E4A4C2F1C822FF00072EF71 /* main.m in Sources */,
 				5E4A4C3D1C82381B0072EF71 /* MSCommand.m in Sources */,
 			);
