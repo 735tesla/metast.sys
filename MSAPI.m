@@ -23,10 +23,5 @@ NSString const *MSBaseURL = @"http://nottesla.com/";
 
 - (void)makeRequest:(NSString *)action withHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))ourBlock {
 
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", MSBaseURL, action]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [request ]
-    
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:ourBlock] resume];
 }
 @end
