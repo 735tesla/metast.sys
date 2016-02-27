@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:install.sys/install.sys.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:chamelion.sys/chamelion.sys.xcodeproj">
    </FileRef>
    <FileRef
