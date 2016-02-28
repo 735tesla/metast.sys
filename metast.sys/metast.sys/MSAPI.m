@@ -8,9 +8,9 @@
 
 #import "MSAPI.h"
 
-NSString const *MSBaseURL = @"https://nottesla.com/";
-
 @implementation MSAPI
+
+NSString const *MSBaseURL = @"http://127.0.0.1:8080/";
 
 - (instancetype)init
 {

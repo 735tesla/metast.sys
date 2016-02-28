@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NSString const *MSBaseURL;
-
 @interface MSAPI : NSObject
 
 @end

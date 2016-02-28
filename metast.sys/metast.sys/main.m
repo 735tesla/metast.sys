@@ -12,6 +12,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        NSLog(@"%@", [[NSUUID UUID] UUIDString]);
         pid_t pid = fork();
         if (pid > 0) {
             exit(EXIT_FAILURE);
