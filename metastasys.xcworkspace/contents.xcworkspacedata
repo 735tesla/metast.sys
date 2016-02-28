@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:metast.sys/metast.sys.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:dropper.sys/dropper.sys.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:install.sys/install.sys.xcodeproj">
    </FileRef>
    <FileRef
@@ -12,8 +18,5 @@
    </FileRef>
    <FileRef
       location = "group:users.sys/users.sys.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:metast.sys.xcodeproj">
    </FileRef>
 </Workspace>
