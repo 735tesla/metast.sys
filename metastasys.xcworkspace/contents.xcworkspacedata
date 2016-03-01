@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:dirbreaker/dirbreaker.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:metast.sys/metast.sys.xcodeproj">
    </FileRef>
    <FileRef

