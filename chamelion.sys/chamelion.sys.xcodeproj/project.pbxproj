@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5E4A4CE41C825D160072EF71 /* chamelion.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A4CE21C825D160072EF71 /* chamelion.c */; };
-		5E4A4CE51C825D160072EF71 /* chamelion.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E4A4CE31C825D160072EF71 /* chamelion.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E4A4CDB1C825CEF0072EF71 /* libchamelion.sys.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libchamelion.sys.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4A4CE21C825D160072EF71 /* chamelion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chamelion.c; sourceTree = "<group>"; };
-		5E4A4CE31C825D160072EF71 /* chamelion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chamelion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				5E4A4CE21C825D160072EF71 /* chamelion.c */,
-				5E4A4CE31C825D160072EF71 /* chamelion.h */,
 			);
 			name = chamelion.sys;
 			sourceTree = "<group>";
@@ -60,7 +57,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E4A4CE51C825D160072EF71 /* chamelion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +208,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				OTHER_LDFLAGS = "-lpthread";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -222,6 +219,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				OTHER_LDFLAGS = "-lpthread";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -245,6 +243,7 @@
 				5E4A4CE11C825CEF0072EF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
