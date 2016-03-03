@@ -11,12 +11,11 @@
 @interface MSCommand : NSObject
 
 @property (nonatomic, strong, readonly) NSString *command;
-@property (nonatomic, readonly) BOOL bufferFull;
-@property (nonatomic, readonly) BOOL executing;
+@property (nonatomic, strong, readonly) NSString *output;
+@property (nonatomic, readonly) BOOL running;
+@property (nonatomic, readonly) BOOL finished;
 
 - (instancetype)initWithCommand:(NSString *)command;
-- (BOOL)startExecution;
-- (BOOL)isFinished;
-- (NSString*)getOutput;
+- (BOOL)run;
 
 @end

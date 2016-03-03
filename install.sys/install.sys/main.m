@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MSAPI.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        [[[MSAPI alloc] init] make]
     }
     return 0;
 }

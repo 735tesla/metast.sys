@@ -12,16 +12,26 @@
 
 NSString const *MSBaseURL = @"http ://127.0.0.1:8080/";
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
-- (void)makeRequest:(NSString *)action withHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))ourBlock {
++ (void)makeRequest:(NSString *)action body:(id __nullable)body handler:(void (^)(id __nullable response, NSError * __nullable error))handler {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", MSBaseURL, action]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    request.HTTPMethod = @"POST";
     
+    if (body)
+        request.HTTPBody = [NSJSONSerialization dataWithJSONObject:body options:0 error:nil];
+    
+    [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * __nullable data, NSURLResponse * __nullable response, NSError * __nullable error) {
+        
+        if (error)
+            return handler(nil, error);
+        
+        NSError *JSONError;
+        id JSONObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&JSONError];
+        
+        if (JSONError)
+            return handler(nil, JSONError);
+        
+        handler(JSONObject, nil);
+    }];
 }
 @end
