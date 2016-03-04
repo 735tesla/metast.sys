@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param body    body of request
  *  @param handler response/error handler
  */
-+ (void)makeRequest:(NSString *)action body:(id __nullable)body handler:(void (^)(id __nullable response, NSError * __nullable error))handler;
++ (void)makeRequest:(NSString *)URL body:(id __nullable)body handler:(void (^)(id __nullable response, NSError * __nullable error))handler;
 
 @end
 NS_ASSUME_NONNULL_END

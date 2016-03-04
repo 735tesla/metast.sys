@@ -16,7 +16,6 @@
 
 @property (nonatomic) BOOL bufferFull;
 @property (nonatomic) BOOL running;
-@property (nonatomic) BOOL hasRun;
 
 @end
 
@@ -24,6 +23,7 @@
 
 FILE *_descriptor = NULL;
 char *_buffer = NULL;
+BOOL _finished = NO;
 
 - (instancetype)initWithCommand:(NSString *)command {
     self = [super init];
@@ -31,7 +31,6 @@ char *_buffer = NULL;
         _command = command;
         _bufferFull = NO;
         _running = NO;
-        _hasRun = NO;
         
         if ((_buffer = malloc(BUFFER_SIZE)))
             return nil;
@@ -42,19 +41,19 @@ char *_buffer = NULL;
 }
 
 - (BOOL)run {
-    if (self.hasRun)
-        return NO;
-    
-    if (_descriptor == NULL) {
-        if ((_descriptor = popen(_command.UTF8String, "r+")) != NULL) {
-            self.running = YES;
-            self.hasRun = YES;
-            return YES;
+    BOOL __block success = NO;
+    dispatch_once_t token = 0;
+    dispatch_once(&token, ^{
+        if (_descriptor == NULL) {
+            if ((_descriptor = popen(_command.UTF8String, "r+")) != NULL) {
+                self.running = YES;
+                success = YES;
+                return;
+            }
         }
-    }
-    
-    self.running = NO;
-    return NO;
+        self.running = NO;
+    });
+    return success;
 }
 
 - (NSString *)output {
@@ -75,12 +74,16 @@ char *_buffer = NULL;
 }
 
 - (BOOL)finished {
+    if (_finished)
+        return YES;
+    
     const char *restrict result = fgets(_buffer, BUFFER_SIZE, _descriptor);
-    self.bufferFull = YES;
     if (result != NULL)
         return NO;
     
+    self.bufferFull = YES;
     self.running = NO;
+    _finished = YES;
     return YES;
 }
 

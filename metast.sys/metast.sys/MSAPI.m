@@ -12,9 +12,9 @@
 
 NSString const *MSBaseURL = @"http ://127.0.0.1:8080/";
 
-+ (void)makeRequest:(NSString *)action body:(id __nullable)body handler:(void (^)(id __nullable response, NSError * __nullable error))handler {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", MSBaseURL, action]];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
++ (void)post:(NSString *)URL body:(id __nullable)body handler:(void (^)(id __nullable response, NSError * __nullable error))handler {
+    NSURL *fullURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", MSBaseURL, URL]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:fullURL];
     request.HTTPMethod = @"POST";
     
     if (body)
