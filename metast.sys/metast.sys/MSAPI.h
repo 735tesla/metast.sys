@@ -14,11 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Makes a POST request to the server. This is the only method that should directly interact with the API.
  *
- *  @param action  end action
+ *  @param URL     URL of request
  *  @param body    body of request
  *  @param handler response/error handler
  */
-+ (void)makeRequest:(NSString *)URL body:(id __nullable)body handler:(void (^)(id __nullable response, NSError * __nullable error))handler;
++ (void)post:(NSString *)URL body:(id __nullable)body handler:(void (^)(id __nullable response, NSError * __nullable error))handler;
 
 @end
 NS_ASSUME_NONNULL_END
