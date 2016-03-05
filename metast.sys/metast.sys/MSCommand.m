@@ -42,7 +42,7 @@ BOOL _finished = NO;
 
 - (BOOL)run {
     BOOL __block success = NO;
-    dispatch_once_t token = 0;
+    static dispatch_once_t token = 0;
     dispatch_once(&token, ^{
         if (_descriptor == NULL) {
             if ((_descriptor = popen(_command.UTF8String, "r+")) != NULL) {

